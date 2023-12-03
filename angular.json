@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "module-enrollment-application:build:production"
+              "buildTarget": "module-enrollment-application:build:production"
             },
             "development": {
-              "browserTarget": "module-enrollment-application:build:development"
+              "buildTarget": "module-enrollment-application:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "module-enrollment-application:build"
+            "buildTarget": "module-enrollment-application:build"
           }
         },
         "test": {
