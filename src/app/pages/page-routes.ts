@@ -3,6 +3,7 @@ import { HomeComponent } from "./home/home.component";
 import { EnrollComponent } from "./enroll/enroll.component";
 import { MyModulesComponent } from "./my-modules/my-modules.component";
 import { SignupComponent } from "../auth/signup/signup.component";
+import { LoginComponent } from "../auth/login/login.component";
 
 const routeConfig: Routes = [
     {
@@ -24,6 +25,11 @@ const routeConfig: Routes = [
         path: 'signup',
         component: SignupComponent,
         title: 'Sign Up'
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+        title: 'Login'
     }
 ];
 export default routeConfig;
