@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from 'src/app/components/button/button.component';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { user } from 'src/app/models/user';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +12,8 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angul
 })
 export class SignupComponent {
 
+  private users: user[] = [];
+
   userForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -19,9 +22,18 @@ export class SignupComponent {
   })
 
   onSubmit(){
-    //firstName = this.userForm.get('firstName')?.value
-    console.log(this.userForm.value);
+
+    //create and store user 
+    let newUser: user = {
+
+      firstName: this.userForm.controls.firstName.value as string,
+      lastName: this.userForm.controls.lastName.value as string,
+      email: this.userForm.controls.email.value as string,
+      password: this.userForm.controls.password.value as string
+    }
+      
+    this.users.push(newUser);
+    console.log(newUser)
   }
   
-
 }

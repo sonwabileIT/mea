@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ButtonComponent } from 'src/app/components/button/button.component';
-import { IModule } from 'src/app/imodule';
+import { IModule } from 'src/app/models/imodule';
 import { ModuleComponent } from 'src/app/components/module/module.component';
 import { CommonModule } from '@angular/common';
 
