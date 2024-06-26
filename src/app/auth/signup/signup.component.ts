@@ -33,7 +33,8 @@ export class SignupComponent {
     }
       
     this.users.push(newUser);
-    console.log(newUser)
+    console.log(newUser);
+    console.log(newUser.userModules)
   }
   
 }
