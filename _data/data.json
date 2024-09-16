@@ -1,0 +1,46 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "firstname": "Sonwabile",
+            "lastname": "Gxoyiya",
+            "email": "sonwabilegxoyiya@gmail.com",
+            "password": "kfnvjkbrejbk",
+            "usermodules": []
+        }
+    ],
+    "modules": [
+        {
+            "id":1,
+            "title":"Application Development Fundimentals 1",
+            "description":"Learn Data-structures and Algorithms."
+        },
+        {
+            "id":2,
+            "title":"Application Development Practice 1",
+            "description":"Code projects in Java."
+        },
+        {
+            "id":3,
+            "title":"Multimedia Applications Fundimentals",
+            "description":"Learn UX/UI designs and use Adobe Photoshop, Learn video editing ."
+        },
+        {
+            "id":4,
+            "title":"Programming Fundimentals 1",
+            "description":"Learn Data-structures and Algorithms."
+        },
+        {
+            "id":5,
+            "title":"Project Management 1",
+            "description":"Code projects in Java."
+        },
+        {
+            "id":6,
+            "title":"Multimedia Applications Practicles",
+            "description":"Learn UX/UI designs and use Adobe Photoshop, Learn video editing ."
+        }
+
+
+    ]
+}
