@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IModule } from 'src/app/models/imodule';
 import { CommonModule } from '@angular/common';
 import { ModuleService } from 'src/app/services/module.service';
+import { UserService } from 'src/app/services/user.service';
+import { user } from 'src/app/models/user';
 
 @Component({
   selector: 'app-my-modules',
@@ -17,16 +19,24 @@ export class MyModulesComponent {
   //   return modules ?? [];
   // }
 
-  constructor(private moduleService: ModuleService){}
+  constructor(private userService: UserService){}
 
   ngOnInit(): void{
-    this.getModules();
+    // this.getModules();
+    this.getUser("1");
+
   }
 
-  async getModules() {
-    this.moduleList = await this.moduleService.getAllModules()
+  // async getModules() {
+  //   this.moduleList = await this.moduleService.getAllModules()
+  // }
+
+  async getUser(id: string) {
+    this.user = await this.userService.getUserById(id)
   }
 
-   moduleList: IModule[] = [];
+
+  user: any = {} ;
+  moduleList: IModule[] = [];
 
 }
