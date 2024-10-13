@@ -3,6 +3,7 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
 import { IModule } from 'src/app/models/imodule';
 import { ModuleComponent } from 'src/app/components/module/module.component';
 import { CommonModule } from '@angular/common';
+import { ModuleService } from 'src/app/services/module.service';
 
 @Component({
   selector: 'app-enroll',
@@ -12,48 +13,16 @@ import { CommonModule } from '@angular/common';
 })
 export class EnrollComponent {
 
-  
+  // ngOnInit
+  constructor(private moduleService: ModuleService){}
 
-  moduleList: IModule[] = [
-    {
-      "id": 0,
-      "title": "Business 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 1,
-      "title": "Programming 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 3,
-      "title": "Application Development Fundimentals 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 4,
-      "title": "Multimedia 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 5,
-      "title": "Business 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 6,
-      "title": "Programming 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 7,
-      "title": "Application Development Fundimentals 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    },
-    {
-      "id": 8,
-      "title": "Multimedia 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-    }
-  ]
+  ngOnInit(): void{
+    this.getAllModules()
+  }
+
+  async getAllModules(){
+    this.moduleList = await this.moduleService.getAllModules()
+  }
+
+  moduleList: IModule[] = []
 }

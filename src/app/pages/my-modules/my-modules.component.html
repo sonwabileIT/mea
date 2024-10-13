@@ -2,62 +2,20 @@
     <div class="text-4xl text-center py-5">My Modules</div>
 </div>
 
-<ul class="grid grid-cols-3 gap-6 ">
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-    <li>
-        <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
-            <div class="block">
-                <div class="text-xl">Module 1</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-            </div>
-        </label>
-    </li>
-</ul>
-
+<div *ngIf="user">
+    <div class="my-4">
+        <h2 class="text-4xl">Student: {{user.firstname}} {{user.lastname}}</h2>
+        <h2 class="text-2xl">Email: {{user.email}}</h2>
+    </div>
+    <p class="my-4">Modules you are enrolled in...</p>
+    <ul class="grid grid-cols-3 gap-6 ">
+        <li *ngFor="let user of user.usermodules" >
+            <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
+                <div class="block">
+                    <div class="text-xl">{{user.title}}</div>
+                    <div>{{user.description}}</div>
+                </div>
+            </label>
+        </li>
+    </ul>
+</div>

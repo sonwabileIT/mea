@@ -24,7 +24,7 @@ export class SignupComponent {
     password: new FormControl('')
   })
 
-  onSubmit(){
+  async onSubmit(){
 
     //create and store user 
     let newUser: user = {
@@ -35,11 +35,19 @@ export class SignupComponent {
       password: this.userForm.controls.password.value as string,
       userModules: []
     }
-      
-    this.users.push(newUser);
-    console.log(newUser);
-    console.log(newUser.userModules)
 
+    const result = await fetch('http://localhost:4000/users',{
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: {"Content-Type": "application/json"}
+    }
+    )
+      
+    // this.users.push(newUser);
+    // console.log(newUser);
+    // console.log(newUser.userModules)
+
+    console.log(result)
     this.router.navigate(['']);
   }
   

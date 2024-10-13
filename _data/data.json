@@ -1,0 +1,77 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "firstname": "Sonwabile",
+            "lastname": "Gxoyiya",
+            "email": "sonwabilegxoyiya@gmail.com",
+            "password": "kfnvjkbrejbk",
+            "usermodules": [
+                {
+                    "id":1,
+                    "title":"Application Development Fundimentals 1",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                },
+                {
+                    "id":2,
+                    "title":"Application Development Practice 1",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                },
+                {
+                    "id":3,
+                    "title":"Multimedia Applications Fundimentals",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                },
+                {
+                    "id":4,
+                    "title":"Application Development Fundimentals 1",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                },
+                {
+                    "id":5,
+                    "title":"Application Development Practice 1",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                },
+                {
+                    "id":6,
+                    "title":"Multimedia Applications Fundimentals",
+                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                }
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "id":1,
+            "title":"Application Development Fundimentals 1",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "id":2,
+            "title":"Application Development Practice 1",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "id":3,
+            "title":"Multimedia Applications Fundimentals",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "id":4,
+            "title":"Programming Fundimentals 1",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "id":5,
+            "title":"Project Management 1",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "id":6,
+            "title":"Multimedia Applications Practicles",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        }
+
+
+    ]
+}
