@@ -3,8 +3,11 @@
 </div>
 
 <div *ngIf="user">
-    <h2 class="text-4xl">Student: {{user.firstname}} {{user.lastname}}</h2>
-    <h2 class="text-2xl">Email: {{user.email}}</h2>
+    <div class="my-4">
+        <h2 class="text-4xl">Student: {{user.firstname}} {{user.lastname}}</h2>
+        <h2 class="text-2xl">Email: {{user.email}}</h2>
+    </div>
+    <p class="my-4">Modules you are enrolled in...</p>
     <ul class="grid grid-cols-3 gap-6 ">
         <li *ngFor="let user of user.usermodules" >
             <label class="inline-flex items-center justify-between p-5 hover:bg-slate-200 border-2 w-full cursor-pointer rounded-lg">
