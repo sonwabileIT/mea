@@ -2,11 +2,11 @@
     "users": [
         {
             "id": "1",
-            "firstname": "Sonwabile",
-            "lastname": "Gxoyiya",
+            "firstName": "Sonwabile",
+            "lastName": "Gxoyiya",
             "email": "sonwabilegxoyiya@gmail.com",
             "password": "kfnvjkbrejbk",
-            "usermodules": [
+            "userModules": [
                 {
                     "id":1,
                     "title":"Application Development Fundimentals 1",
