@@ -38,8 +38,11 @@
         </div>
         <div class="flex flex-row-reverse my-10 justify-between">
             <!-- <app-button title="Sign Up" type="submit" (click)="onSubmit()" [disabled]="userForm.valid" colour="bg-green-500 text-center p-3 rounded-md flex px-20"/> -->
-            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-white text-center p-3 rounded-md flex px-20">Submit</button>
-            <app-button title="Cancel" colour="border-2 border-gray-400 text-gray-500 text-center p-3 rounded-md flex px-20"/>
+            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-white text-center p-2 text-lg rounded-md flex px-20">Submit</button>
+            <app-button title="Cancel" colour="border-2 border-gray-400 text-gray-500 text-center p-2 text-lg rounded-md flex px-20"/>
+        </div>
+        <div class="text-center">
+            <p>Already have an account? <a routerLink="/login" class="text-green-600 underline underline-offset-2">Log In</a></p>
         </div>
         
     </div>

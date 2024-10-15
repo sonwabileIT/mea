@@ -4,12 +4,12 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { user } from 'src/app/models/user';
 import {v4 as uuidv4} from 'uuid';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ButtonComponent, ReactiveFormsModule, CommonModule],
+  imports: [ButtonComponent, ReactiveFormsModule, CommonModule, RouterModule],
   templateUrl: './signup.component.html'
 })
 export class SignupComponent {
