@@ -1,30 +1,30 @@
 <form [formGroup]="userForm">
-    <div class="bg-white p-4 rounded-md max-w-screen-sm mx-auto my-10 shadow-lg">
+    <div class="bg-white p-6 px-10 rounded-md max-w-screen-sm mx-auto my-10 shadow-lg">
         <div class="my-5">
             <h2 class="text-center text-3xl">Sign Up</h2>
         </div>
-        <div class="mx-5 my-5">
+        <div class=" my-5">
             <div class="my-5">
-                <label class="block">Firstname</label>
-                <input type="text" formControlName="firstName" class="block w-full p-2 border-2 border-slate-500 rounded-md">
+                <label class="block mb-2 font-normal">Firstname</label>
+                <input type="text" formControlName="firstName" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Surname</label>
-                <input type="text" formControlName="lastName" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Surname</label>
+                <input type="text" formControlName="lastName" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Email</label>
-                <input type="email" formControlName="email" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Email</label>
+                <input type="email" formControlName="email" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Password</label>
-                <input type="password" formControlName="password" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Password</label>
+                <input type="password" formControlName="password" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
         </div>
-        <div class="flex mx-5 my-10 justify-between">
+        <div class="flex flex-row-reverse my-10 justify-between">
             <!-- <app-button title="Sign Up" type="submit" (click)="onSubmit()" [disabled]="userForm.valid" colour="bg-green-500 text-center p-3 rounded-md flex px-20"/> -->
-            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-center p-3 rounded-md flex px-20">Submit</button>
-            <app-button title="Cancel" colour="bg-gray-400 text-center p-3 rounded-md flex px-20"/>
+            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-white text-center p-3 rounded-md flex px-20">Submit</button>
+            <app-button title="Cancel" colour="border-2 border-gray-400 text-gray-500 text-center p-3 rounded-md flex px-20"/>
         </div>
         
     </div>
