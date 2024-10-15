@@ -9,11 +9,11 @@
             <h2 class="text-2xl">Email: {{user.email}}</h2>
         </div>
         <p class="my-4">Modules you are enrolled in...</p>
-        <ul class="grid grid-cols-3 gap-6 ">
+        <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
             <li *ngFor="let user of user.userModules" >
                 <label class="inline-flex items-center justify-between p-5 bg-white hover:shadow-lg border-2 border-white w-full cursor-pointer rounded-lg">
                     <div class="block">
-                        <div class="text-xl">{{user.title}}</div>
+                        <div class="text-xl font-medium mb-2">{{user.title}}</div>
                         <div>{{user.description}}</div>
                     </div>
                 </label>
