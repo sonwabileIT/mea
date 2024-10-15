@@ -9,15 +9,23 @@
             <h2 class="text-2xl">Email: {{user.email}}</h2>
         </div>
         <p class="my-4">Modules you are enrolled in...</p>
-        <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <li *ngFor="let user of user.userModules" >
-                <label class="inline-flex items-center justify-between p-5 bg-white hover:shadow-lg border-2 border-white w-full cursor-pointer rounded-lg">
-                    <div class="block">
-                        <div class="text-xl font-medium mb-2">{{user.title}}</div>
-                        <div>{{user.description}}</div>
-                    </div>
-                </label>
-            </li>
-        </ul>
+        <div *ngIf="user.userModules.length > 0; else nocontent">
+            <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <li *ngFor="let user of user.userModules" >
+                    <label class="inline-flex items-center justify-between p-5 bg-white hover:shadow-lg border-2 border-white w-full cursor-pointer rounded-lg">
+                        <div class="block">
+                            <div class="text-xl font-medium mb-2">{{user.title}}</div>
+                            <div>{{user.description}}</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+
+<ng-template #nocontent>
+    <div class="p-10 border border-gray-700 bg-gray-300 rounded-md">
+        <p class="text-center">Subject list is empty...</p>
+    </div>
+</ng-template>
