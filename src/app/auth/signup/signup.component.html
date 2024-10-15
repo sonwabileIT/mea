@@ -1,30 +1,48 @@
 <form [formGroup]="userForm">
-    <div class="bg-white p-4 rounded-md max-w-screen-sm mx-auto my-10 shadow-lg">
+    <div class="bg-white p-6 px-10 rounded-md max-w-screen-sm mx-auto my-10 shadow-lg">
         <div class="my-5">
             <h2 class="text-center text-3xl">Sign Up</h2>
         </div>
-        <div class="mx-5 my-5">
+        <div class=" my-5">
             <div class="my-5">
-                <label class="block">Firstname</label>
-                <input type="text" formControlName="firstName" class="block w-full p-2 border-2 border-slate-500 rounded-md">
+                <label class="block mb-2 font-normal">Firstname</label>
+                <input type="text" formControlName="firstName" placeholder="e.g. John" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Surname</label>
-                <input type="text" formControlName="lastName" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Surname</label>
+                <input type="text" formControlName="lastName" placeholder="e.g. Doe" class="block w-full p-2 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Email</label>
-                <input type="email" formControlName="email" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Email</label>
+                <div class="relative">
+                    <div class="absolute flex inset-y-5 items-center ps-3.5">
+                        <svg class="w-5 h-5 text-gray-400" data-slot="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"></path>
+                            <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <input type="email" formControlName="email" placeholder="example@gmail.com" class="block w-full p-2 ps-10 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
             <div class="my-5">
-                <label class="block">Password</label>
-                <input type="password" formControlName="password" class="block w-full p-2 border-2 border-gray-500 rounded-md">
+                <label class="block mb-2 font-normal">Password</label>
+                <div class="relative">
+                    <div class="absolute flex inset-y-5 items-center ps-3.5">
+                        <svg class="w-5 h-5 text-gray-400" data-slot="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z"></path>
+                          </svg>
+                    </div>
+                </div>
+                <input type="password" formControlName="password" placeholder="Enter password..." class="block w-full p-2 ps-10 border border-gray-500 rounded-md focus:outline-green-500">
             </div>
         </div>
-        <div class="flex mx-5 my-10 justify-between">
+        <div class="flex flex-row-reverse my-10 justify-between">
             <!-- <app-button title="Sign Up" type="submit" (click)="onSubmit()" [disabled]="userForm.valid" colour="bg-green-500 text-center p-3 rounded-md flex px-20"/> -->
-            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-center p-3 rounded-md flex px-20">Submit</button>
-            <app-button title="Cancel" colour="bg-gray-400 text-center p-3 rounded-md flex px-20"/>
+            <button type="submit" (click)="onSubmit()" [disabled]="!userForm.valid" class="bg-green-500 text-white text-center p-2 text-lg rounded-md flex px-20">Submit</button>
+            <app-button title="Cancel" colour="border-2 border-gray-400 text-gray-500 text-center p-2 text-lg rounded-md flex px-20"/>
+        </div>
+        <div class="text-center">
+            <p>Already have an account? <a routerLink="/login" class="text-green-600 underline underline-offset-2">Log In</a></p>
         </div>
         
     </div>
