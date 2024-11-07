@@ -32,7 +32,8 @@ export class UserauthService {
     this.isLoggedIn = isLoggedIn
   }
 
-  signIn(){
+  signIn(user: user){
+    localStorage.setItem('user', JSON.stringify(user))
     this.setIsLoggedIn(true)
   }
 
