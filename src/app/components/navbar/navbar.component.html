@@ -6,9 +6,11 @@
         <div class="">
             <a routerLink="mymodules" class=" text-white hover:bg-green-300 p-3">My Modules</a>
             <a routerLink="enroll" class=" text-white hover:bg-green-300 p-3">Enroll</a>
-            <a routerLink="signup" class=" text-white hover:bg-green-300 p-3">Sign In</a>
-            <a routerLink="login" class=" text-white hover:bg-green-300 p-3">Login</a>
-            <button class="text-white hover:bg-green-300" (click)="logout()">Logout</button>
+            
+                <a *ngIf="userAuth.isLoggedIn === false" routerLink="signup" class=" text-white hover:bg-green-300 p-3">Sign In</a>
+                <a *ngIf="userAuth.isLoggedIn === false" routerLink="login" class=" text-white hover:bg-green-300 p-3">Login</a>
+            
+            <button *ngIf="userAuth.isLoggedIn === true" class="text-white hover:bg-green-300" (click)="logout()">Logout</button>
         </div>
     </div>
 </div>

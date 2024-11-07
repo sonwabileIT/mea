@@ -43,6 +43,9 @@ export class SignupComponent {
     }
     )
       
+    //log in user using service
+    //userAuth.loginUser(result.id)
+
     // this.users.push(newUser);
     // console.log(newUser);
     // console.log(newUser.userModules)
