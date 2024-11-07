@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angul
 import { user } from 'src/app/models/user';
 import {v4 as uuidv4} from 'uuid';
 import { Router, RouterModule } from '@angular/router';
+import { UserauthService } from 'src/app/services/userauth.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,6 +17,7 @@ export class SignupComponent {
 
   private users: user[] = [];
   private router = inject(Router);
+  userAuth = inject(UserauthService)
 
   userForm = new FormGroup({
     firstName: new FormControl(''),
@@ -43,9 +45,8 @@ export class SignupComponent {
     }
     )
       
-    // this.users.push(newUser);
-    // console.log(newUser);
-    // console.log(newUser.userModules)
+    //log in user using service
+    this.userAuth.signIn(newUser)
 
     console.log(result)
     this.router.navigate(['']);
