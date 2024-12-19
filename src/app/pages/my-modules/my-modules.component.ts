@@ -21,15 +21,16 @@ export class MyModulesComponent {
   // }
 
   userAuth = inject(UserauthService)
+  userService = inject(UserService)
 
-  constructor(private userService: UserService){}
+  constructor(){}
 
   ngOnInit(): void{
     // this.getModules();
-    let localuser = localStorage.getItem('user')!;
-    let user: user = JSON.parse(localuser)
+    let localUserId = localStorage.getItem('userId')!;
+    // let user: user = JSON.parse(localUserId)
 
-    this.getUser(user.id);
+    this.getUser(JSON.parse(localUserId));
 
   }
 
