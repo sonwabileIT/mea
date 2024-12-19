@@ -8,8 +8,15 @@ export class UserService {
 
   constructor() { }
 
+  async getUsers(): Promise<user[]>{
+    let response = await fetch('http://localhost:4000/users');
+    let users = await response.json()
+
+    return users 
+  }
+
   async getUserById(id: string): Promise<user> {
-    const result = await fetch(`http://localhost:4000/users/${id} `);
+    const result = await fetch(`http://localhost:4000/users/${id}`);
     const user = await result.json();
     console.log(user)
     return user 
