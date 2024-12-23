@@ -45,7 +45,4 @@ export class MyModulesComponent implements OnInit{
     this.user = await this.userService.getUserById(id)
   }
 
-
-  
-
 }
