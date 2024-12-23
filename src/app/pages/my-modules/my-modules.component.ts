@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { IModule } from 'src/app/models/imodule';
 import { CommonModule } from '@angular/common';
 import { ModuleService } from 'src/app/services/module.service';
@@ -12,13 +12,16 @@ import { UserauthService } from 'src/app/services/userauth.service';
   imports: [CommonModule],
   templateUrl: './my-modules.component.html'
 })
-export class MyModulesComponent {
+export class MyModulesComponent implements OnInit{
 
   // async getAllModules(): Promise<IModule[]>{
   //   const result = await fetch('http://localhost:4000/modules')
   //   const modules = await result.json();
   //   return modules ?? [];
   // }
+
+  user: Partial<user> = {};
+  moduleList: IModule[] = [];
 
   userAuth = inject(UserauthService)
   userService = inject(UserService)
@@ -43,7 +46,6 @@ export class MyModulesComponent {
   }
 
 
-  user: any = {} ;
-  moduleList: IModule[] = [];
+  
 
 }

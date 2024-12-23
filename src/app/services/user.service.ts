@@ -19,6 +19,6 @@ export class UserService {
     const result = await fetch(`http://localhost:4000/users/${id}`);
     const user = await result.json();
     console.log(user)
-    return user 
+    return user ?? {}
   }
 }
