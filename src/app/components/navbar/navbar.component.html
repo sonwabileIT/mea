@@ -5,7 +5,7 @@
         </div>
         <div class="">
             <a routerLink="mymodules" class=" text-white hover:bg-green-300 p-3">My Modules</a>
-            <a routerLink="enroll" class=" text-white hover:bg-green-300 p-3">Enroll</a>
+            <a *ngIf="userAuth.isLoggedIn === true"  routerLink="enroll" class=" text-white hover:bg-green-300 p-3">Enroll</a>
             
                 <a *ngIf="userAuth.isLoggedIn === false" routerLink="signup" class=" text-white hover:bg-green-300 p-3">Sign In</a>
                 <a *ngIf="userAuth.isLoggedIn === false" routerLink="login" class=" text-white hover:bg-green-300 p-3">Login</a>
