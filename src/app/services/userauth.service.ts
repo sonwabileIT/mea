@@ -1,16 +1,19 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, OnInit } from '@angular/core';
 import { user } from '../models/user';
 import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserauthService {
+export class UserauthService implements OnInit{
 
   isLoggedIn: boolean = false;
   userService = inject(UserService)
 
   constructor() { }
+  ngOnInit(): void {
+      this.checkIfLoggeddIn();
+  }
 
   getIsLoggedIn(){
     return this.isLoggedIn
@@ -64,5 +67,21 @@ export class UserauthService {
       console.log("isLoggedIn: " + this.getIsLoggedIn())
     }
     
+  }
+
+  //check if logged in via localSorage data
+
+  checkIfLoggeddIn(){
+
+
+    if (localStorage.getItem('userId')){
+      this.setIsLoggedIn(true)
+      console.log(this.isLoggedIn)
+    } else{
+      this.setIsLoggedIn(false)
+      console.log(this.isLoggedIn)
+    }
+
+    //set isLoggedIn to true
   }
 }
