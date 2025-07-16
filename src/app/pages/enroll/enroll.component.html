@@ -1,78 +1,92 @@
 <div class="mx-auto my-5">
-    <div class="text-4xl text-center py-5">Enroll Form</div>
-    <div class="text-xl text-center">Each student must select more than 1 module in order to register</div>
+  <div class="text-4xl text-center py-7">Enroll Form</div>
 
-    <div class="mx-auto max-w-screen-md my-5">
-        <form [formGroup]="modulosenrollForm">
-            <ul class="grid gap-6">
-                <li>
-                    <input type="checkbox" class="" formControlName="applicationDevelopmentFundimentals1">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Application Development Fundimentals 1</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" class="" formControlName="applicationDevelopmentPractice1">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Application Development Practice 1</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" class="" formControlName="multimediaApplicationsFundimentals1">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Multimedia Applications Fundimentals 1</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" class="" formControlName="programmingFundimentals1">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Programming Fundimentals 1</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" class="" formControlName="projectManagement1">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Project Management 1</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-                <li>
-                    <input type="checkbox" class="" formControlName="multimediaApplicationsPracticles">
-                    <label  class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
-                        <div class="block">
-                            <div class="text-xl">Multimedia Applications Practicles</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
-                        </div>
-                    </label>
-                </li>
-            </ul>
+  <div class="text-xl text-center">Hi {{user.firstName}}, please select the subjects you will be studying.</div>
+  <div class="text-xl text-center">Select 1 or more modules in to complete the form.</div>
 
-            <div class="my-10 flex items-center justify-between">
-                <app-button title="Enter" colour="bg-green-400 py-2 px-24 rounded-md" (click)="submit()"></app-button>
-                <!-- <button type="button" class=" py-2 px-24 bg-green-400 rounded-md">Cancel</button> -->
-                <app-button title="Cancel" colour="bg-green-400 py-2 px-24 rounded-md"></app-button>
+  <div class="mx-auto max-w-screen-md my-5">
+    <form [formGroup]="modulosenrollForm">
+      <ul class="grid gap-6">
+        <li>
+          <input type="checkbox" class="" formControlName="applicationDevelopmentFundimentals1">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Application Development Fundimentals 1</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
             </div>
-        </form>
-    </div>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" class="" formControlName="applicationDevelopmentPractice1">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Application Development Practice 1</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" class="" formControlName="multimediaApplicationsFundimentals1">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Multimedia Applications Fundimentals 1</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" class="" formControlName="programmingFundimentals1">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Programming Fundimentals 1</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" class="" formControlName="projectManagement1">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Project Management 1</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" class="" formControlName="multimediaApplicationsPracticles">
+          <label
+            class="inline-flex items-center justify-between p-5 bg-white border-2 hover:border-blue-500  w-full cursor-pointer rounded-lg peer-checked:border-green-500">
+            <div class="block">
+              <div class="text-xl">Multimedia Applications Practicles</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+            </div>
+          </label>
+        </li>
+      </ul>
 
-    <p>{{this.modulosenrollForm.value | json}}</p>
-    <!-- <div class="mx-auto max-w-screen-md my-5">
+      <div class="my-10 flex items-center justify-between">
+        <app-button title="Enter" colour="bg-green-400 py-2 px-24 rounded-md" (click)="submit(user.id!)"></app-button>
+        <!-- <button type="button" class=" py-2 px-24 bg-green-400 rounded-md">Cancel</button> -->
+        <app-button title="Cancel" colour="bg-green-400 py-2 px-24 rounded-md"></app-button>
+      </div>
+    </form>
+  </div>
+
+  <p>{{this.modulosenrollForm.value | json}}</p>
+  <!-- <div class="mx-auto max-w-screen-md my-5">
         <ul class="grid gap-6">
-            
+
             <app-module *ngFor="let module of moduleList" [module]="module"></app-module>
 
         </ul>
@@ -81,6 +95,6 @@
             <button type="button" class=" py-2 px-24 bg-green-400 rounded-md">Cancel</button>
             <app-button title="Cancel" colour="bg-green-400 py-2 px-24 rounded-md"></app-button>
         </div>
-        
+
     </div> -->
 </div>
